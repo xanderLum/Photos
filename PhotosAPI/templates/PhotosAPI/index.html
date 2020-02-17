@@ -1,0 +1,12 @@
+{% if all_photos %}
+    <h3>Photo list:</h3>
+    <ul>
+        {% for photo in all_photos %}
+        <li>
+            <a href="/photo/{{ photo.id }}">{{ photo }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h3>You don't have any photos!</h3>
+{% endif %}

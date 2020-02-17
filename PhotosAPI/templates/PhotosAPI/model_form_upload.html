@@ -1,0 +1,11 @@
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+      <!--<input id="file" name="filename" type="file" />
+      <input id="caption" name="caption" type="text" />-->
+    <button type="submit">Upload</button>
+  </form>
+
+  <p><a href="{% url 'index' %}">Return to home</a></p>
+{% endblock %}
